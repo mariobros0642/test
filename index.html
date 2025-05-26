@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora de Cardenas y Flores</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('img/fondo1.jpg'); /* Agrega la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  td {
+    text-align: center;
+    padding: 10px;
+  }
+
+  button {
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  button img {
+    max-width: 30px;
+    margin-left: 5px;
+  }
+</style>
+</head>
+<body>
+
+<h1>LA CALCULADORA DE CARDENAS Y FLORES</h1>
+
+<input type="number" id="nombre1" placeholder="Nombre 1" value="0">
+<input type="number" id="nombre2" placeholder="Nombre 2" value="0">
+
+<table>
+  <tr>
+    <td><button onclick="sumarNombres()">Sumar <img src="img/imagenSumar.jpg" alt="Suma"></button><br><div id="imagenSumar"></div></td>
+    <td><button onclick="restarNombres()">Restar <img src="img/imagenRestar.png" alt="Resta"></button><br><div id="imagenRestar"></div></td>
+  </tr>
+  <tr>
+    <td><button onclick="multiplicarNombres()">Multiplicar <img src="img/imagenMultiplicar.jpg" alt="Multiplicación"></button><br><div id="imagenMultiplicar"></div></td>
+    <td><button onclick="dividirNombres()">Dividir <img src="img/imagenDivision.jpg" alt="División"></button><br><div id="imagenDivision"></div></td>
+  </tr>
+</table>
+
+<button onclick="restablecer()">Restablecer</button>
+
+<p>
+  <h4>Cardenas Lopez Mario Antonio y Flores Ceballos Carlos Alberto | Alondra Zavala</h4>
+  <h3>4A PROGRAMACIÓN - CBTIS 206 - 2025</h3>
+</p>
+
+<script>
+  function sumarNombres() {
+    let nombre1 = parseFloat(document.getElementById("nombre1").value);
+    let nombre2 = parseFloat(document.getElementById("nombre2").value);
+    document.getElementById("imagenSumar").innerHTML = nombre1 + nombre2;
+  }
+
+  function restarNombres() {
+    let nombre1 = parseFloat(document.getElementById("nombre1").value);
+    let nombre2 = parseFloat(document.getElementById("nombre2").value);
+    document.getElementById("imagenRestar").innerHTML = nombre1 - nombre2;
+  }
+
+  function multiplicarNombres() {
+    let nombre1 = parseFloat(document.getElementById("nombre1").value);
+    let nombre2 = parseFloat(document.getElementById("nombre2").value);
+    document.getElementById("imagenMultiplicar").innerHTML = nombre1 * nombre2;
+  }
+
+  function dividirNombres() {
+    let nombre1 = parseFloat(document.getElementById("nombre1").value);
+    let nombre2 = parseFloat(document.getElementById("nombre2").value);
+    if (nombre2 === 0) {
+      document.getElementById("imagenDivision").innerHTML = "División por cero no permitida";
+    } else {
+      document.getElementById("imagenDivision").innerHTML = nombre1 / nombre2;
+    }
+  }
+
+  function restablecer() {
+    document.getElementById("nombre1").value = 0;
+    document.getElementById("nombre2").value = 0;
+    document.getElementById("imagenSumar").innerHTML = "";
+    document.getElementById("imagenRestar").innerHTML = "";
+    document.getElementById("imagenMultiplicar").innerHTML = "";
+    document.getElementById("imagenDivision").innerHTML = "";
+  }
+</script>
+
+</body>
+</html>

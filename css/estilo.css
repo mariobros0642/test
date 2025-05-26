@@ -1,0 +1,76 @@
+body{
+	background-size: 100%;
+	background-color: #928785;
+}
+ 
+header{
+	background-color: darkred; /*color de fondo de esta caja */
+	color: white; /*color de texto */
+	text-align: center; /*alineacion del texto centrado */
+	padding: 5px;
+	font-size: 40px;
+	width: 100%;
+}
+ 
+nav{
+	line-height: 30px;
+	background-color: indianred; /*color de fondo del nav con ese codigo hexadecimal */
+	color: white;
+	height: 600px; /*altura de la caja nav	 */
+	float: left; /*flote a la izquierda */
+	padding: 5px;
+	font-size: 22px; /*tamaño de las letter */
+	text-decoration: none;
+	margin: 20px;
+	width: 20%;
+}
+ 
+nav a:hover{
+	/*estoy configurando los enlaces cuando los clickeo */
+	text-decoration: underline;
+	cursor: pointer;
+}
+ 
+section{
+	width: 750px;
+	float: left;
+	padding: 10px;
+	color: black;
+	text-align: justify;
+	font-size: 20px;
+	padding: 0px 150px 0px 150px;
+}
+ 
+footer
+{
+	background-color: darkred;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+	width: 100%;
+}
+img{
+	display: block;
+	margin: auto;
+	clear: right;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+main .fondo{
+	text-align: center;
+	width: 40%;
+}
+main .fondo img{
+	max-width: 40%;
+	height: auto;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: transform 0.3s ease;
+}
+main .fondo img:hover{
+	//que cuando le paso el mouse por encima a las img
+	transform: scale(1.05);
+}

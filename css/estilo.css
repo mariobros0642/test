@@ -1,0 +1,25 @@
+body {
+    background-image: url('fondo.jpg'); 
+    font-family: sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+td {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+img {
+    width: 80%; 
+    height: auto;
+    display: block;
+    border: none;
+}

@@ -1,0 +1,27 @@
+table {
+    width: 90%;
+    margin: 20px auto; 
+    border-collapse: collapse; 
+}
+
+table, th, td {
+    border: 1px solid #ddd; 
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+}
